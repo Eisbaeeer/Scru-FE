@@ -1,4 +1,4 @@
-![Logo](pics/scru-fe01.jpg)
+![Logo](Pics/scru-fe01.jpg)
 # Scru-FE
 
 Hier sind alle Informationen zum Projekt Scru-FE hinterlegt.
@@ -10,7 +10,7 @@ Informationen unter http://www.ZExtrude.com
 Das Projekt wurde angepasst und erweitert. Es bietet die Grundlage, um Jugendlichen den Umgang mit Microcontrollern, Elektronischen Komponenten und deren Programmierung beizubringen.
 Es wird in detaillierten Schritten gelernt, wie die Baugruppen funktionieren und diese Programmtechnisch angesprochen werden können.
  
-![Scru-FE](pics/scru-fe02.jpg?raw=true "Scru-FE")
+![Scru-FE](Pics/scru-fe02.jpg?raw=true "Scru-FE")
 
 ## Verzeichnisstruktur
 * Pics enthält Bilder
