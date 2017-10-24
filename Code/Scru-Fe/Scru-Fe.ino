@@ -4,9 +4,12 @@ www.ZExtrude.com for notes and tutorials on SCRU-FE
 initial written by Ryan Theiss 2015
 written for SCRU-FE on Thingiverse.com assembled with an Arduino UNO and Keyes_L298P motor shield
 
-* Eisbaeeer 20171020
+----- CHANGELOG -----
+* Version 0.1 (Eisbaeeer) 20171020
 - added comments in german
 - changed some subroutines
+* Version 0.2 (Eisbaeeer) 20171024
+- fixed routines in case of drive in edges
 
 --------------------------------------------------*/
 
@@ -38,7 +41,7 @@ written for SCRU-FE on Thingiverse.com assembled with an Arduino UNO and Keyes_L
     #define voltagePin A3 // Batterie Spannung
 
 // Konstanten festlegen
-    const uint8_t MIN_DIST = 30; // Mindestabstand zur Richtungsänderung
+    const uint8_t MIN_DIST = 40; // Mindestabstand zur Richtungsänderung
     const float MIN_VOLT = 4.7; // Untere Spannungsgrenze
 
     int distance;   // Variable für Abstand
@@ -126,9 +129,18 @@ void loop()         // Hauptprogrammschleife
     else
     {
       headLeft();               // Servo nach links drehen
+      distance = distMes();       // Messe die Distanz mit dem Ultraschallmodul. Ergebnis in der Variablen in cm
+
+      if (distance >= MIN_DIST || distance <= 0) // Wenn die Entfernung größer, gleich Mindestenfernung ist oder die Entfernung kleiner, gleich Null, dann...
+    {
       motorLeft();              // Links drehen
       Serial.println(F("motorLeft"));
       motorBack(300);           // Rückwärts fahren für Zeit in ms 
     }
+    else
+    {
+      motorBack(1000);           // Rückwärts fahren für Zeit in ms 
+    }
   }
+}
 }

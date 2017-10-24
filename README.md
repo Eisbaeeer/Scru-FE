@@ -23,10 +23,15 @@ Es wird in detaillierten Schritten gelernt, wie die Baugruppen funktionieren und
 
 ## To DO:
 * Erstellen von Schulungsunterlagen
-* 
+* Codeaufbau strukturiert aufbauen
+* Anleitung für die Montage der Bauteile
+* Stromlaufplan
 
 ## ChangeLog
 
 ### 0.1 (2017-10-20)
 * (Eisbaeeer)
 * inital version
+### 0.2 (2017-10-24)
+* (Eisbaeeer)
+* fixed routines in edges

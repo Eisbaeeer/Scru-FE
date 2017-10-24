@@ -113,7 +113,7 @@ void motorForward()
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
     analogWrite(enA, 255);
-    analogWrite(enB, 210);
+    analogWrite(enB, 250);
   }
 
 void motorHalt()
@@ -130,7 +130,7 @@ void motorBack(byte backlenght)
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
   analogWrite(enA, 255);
-  analogWrite(enB, 210);
+  analogWrite(enB, 230);
   delay(backlenght);
   motorStop();
 }
@@ -144,8 +144,8 @@ void motorLeft(void)
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
   analogWrite(enA, 255);
-  analogWrite(enB, 210);
-  delay(500);
+  analogWrite(enB, 230);
+  delay(300);
   motorStop();
 }
 
@@ -158,7 +158,7 @@ void motorRight(void)
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
   analogWrite(enA, 255);
-  analogWrite(enB, 210);
-  delay(500);
+  analogWrite(enB, 230);
+  delay(300);
   motorStop();
 }
